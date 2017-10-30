@@ -22,15 +22,23 @@ BWT = b, n, n, $, a, a, a
 string = "$"
 
 SortedList    BWT
+
 $      ->       b 1. add b to string. String = "$b" go to first occurance of b in sorted list
+
 a      ->       n 3. add n to string. String = "$ban" go to first occurance of n
+
 a      ->       n 5. add n to string. String = "$banan" go to second occurance of n
+
 a      ->       $ 6. $ denotes end of the string, we're finished
+
 b      ->       a 2. add a to string. String = "$ba" go to the first occurance of a
+
 n      ->       a 4. add a to string. String = "$bana" go to second occurance of a
+
 n      ->       a 5. add a to string. String = "$banana" go to third occurance of a
 
 string is now set to "$banana". This is how we generate the original word from BWT using the inverse.
 
 Time complexity = O(M + N) Where M is the size of the alphabet (255 for unicode) and N is the length of the original decompressed text.
+
 Space complexity = O(M + N) Where M is the size of the alphabet (255 for unicode) and N is the length of the original decompressed text.
