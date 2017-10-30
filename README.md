@@ -1,4 +1,4 @@
-# Burrows-WheelerTransform
+# Burrows-Wheeler Transform
 Use Burrows-Wheeler transform to compress and decompress text.
 
 # bwtGenerator.py
